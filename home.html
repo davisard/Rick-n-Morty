@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="home.css" />
-    <link rel="shortcut icon" href="#" />
+    <!-- <link rel="shortcut icon" href="#" /> -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon" />
     <title>Rick & Morty</title>
   </head>
   <body style="background-color: rgb(36, 56, 68); width: 100%; height: 100vh">
@@ -41,8 +42,42 @@
         </div>
       </header>
       <div class="wrapper"></div>
+      <div id="overlay" class="hidden"></div>
+      <div id="modal" class="hidden">
+        <div class="fav-button">
+          <svg
+            id="fav-button"
+            width="40"
+            height="50"
+            viewBox="0 0 52 92"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 92C49.6484 92 49.3047 91.9063 48.9922 91.7266L26 78.3125L3.00781 91.7266C2.39063 92.0859 1.625 92.0937 1.00781 91.7344C0.382812 91.375 0 90.7188 0 90V2C0 0.898438 0.898438 0 2 0H50C51.1094 0 52 0.898438 52 2V90C52 90.7188 51.6172 91.375 50.9922 91.7344C50.6875 91.9141 50.3438 92 50 92Z"
+              fill="rgb(51, 51, 51)"
+            />
+          </svg>
+        </div>
+        <div class="close-button">
+          <svg
+            id="close-button"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 32.990234 15.986328 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.990234 15.986328 z"
+            ></path>
+          </svg>
+        </div>
+        <div id="modal-content"></div>
+      </div>
     </main>
-    <!-- <script src="home.js"></script> -->
     <script src="home2.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

@@ -33,8 +33,8 @@ async function fetchData() {
     const data = await res.json();
     characterArr = data.results;
     updateCharacters();
-    console.log(data.results);
-    console.log(newUrl);
+    // console.log(data.results);
+    // console.log(newUrl);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -44,10 +44,11 @@ function updateCharacters() {
   wrapper.innerHTML = "";
   characterArr.forEach((character) => {
     let characterCard = document.createElement("div");
-    characterCard.classList.add("card");
-    let card = `<img src="${character.image}" alt="character image">
-          <p>${character.name}</p>`;
+    characterCard.classList.add("card", "check");
+    let card = `<img src="${character.image}" alt="character image" class="check">
+          <p class="check">${character.name}</p>`;
     characterCard.innerHTML = card;
+    characterCard.id = `${character.id}`;
     wrapper.appendChild(characterCard);
   });
 }
