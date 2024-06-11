@@ -43,6 +43,7 @@ window.onload = () => {
 
   document.getElementById("submit").addEventListener("click", logIn);
 
+  //PROMENITI (IZBACITI FOR PETLJU)
   function logIn(e) {
     e.preventDefault();
     let user = document.getElementById("username").value;

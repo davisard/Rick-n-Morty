@@ -1,6 +1,7 @@
 // VARIABLES
 
 let characterArr = [];
+const favPageBtn = document.getElementById("favourites-link");
 const wrapper = document.querySelector(".wrapper");
 const dropdownSpecies = document.getElementById("spiecies-select");
 const dropdownStatus = document.getElementById("status-select");
@@ -17,6 +18,10 @@ dropdownGender.addEventListener("change", fetchData);
 dropdownName.addEventListener("keyup", function (e) {
   if (e.key === "Enter") fetchData();
 });
+favPageBtn.addEventListener(
+  "click",
+  () => (window.location.href = "/favourites.html")
+);
 
 // FUNCTIONS
 
